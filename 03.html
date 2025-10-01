@@ -1,10 +1,28 @@
 <script>
     /*
     Média de Temperaturas
-Considere o seguinte Array de temperaturas: temperaturas = [25.5, 27.0, 24.8, 28.1, 29.3, 26.5, 25.9];
-Peça para o usuário inserir a temperatura do dia anterior (ontem) e também a temperatura de dois dias atrás (anteontem).
-Ou seja, são duas entradas fornecidas pelos usuários (dois prompts).
-Calcule a média de temperaturas que estão no Array e apresente para o usuário qual foi a média calculada.
+    Considere o seguinte Array de temperaturas: temperaturas = [25.5, 27.0, 24.8, 28.1, 29.3, 26.5, 25.9];
+    Peça para o usuário inserir a temperatura do dia anterior (ontem) e também a temperatura de dois dias atrás (anteontem).
+    Ou seja, são duas entradas fornecidas pelos usuários (dois prompts).
+    Calcule a média de temperaturas que estão no Array e apresente para o usuário qual foi a média calculada.
     */
+
+    let temperaturas = [25.5, 27.0, 24.8, 28.1, 29.3, 26.5, 25.9];
+    const tempOntem = Number(prompt(`Insira a temperatura do dia anterior (ontem): `));
+    const tempAnteontem = Number(prompt(`Insira a temperatura de dois dias atrás (anteontem): `));
+
+    let listaTemperaturas = [tempOntem, tempAnteontem];
+    let listaCompleta = temperaturas.concat(listaTemperaturas);
+
+    let soma = 0;
+
+    for(let num of listaCompleta){
+        soma = soma + num;
+    }
+
+    let quantidade = listaCompleta.length;
+    let media = soma / quantidade;
+
+    document.write(`A média das temperaturas da lista é de: ${media.toFixed(1)}°C`);
 
 </script>

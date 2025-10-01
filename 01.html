@@ -6,4 +6,20 @@ Peça para o usuário adicionar uma nova nota. Depois, usando for...of, conte qu
 Exiba o número total de alunos aprovados.
     */
 
+    let notasAlunos = [8.5, 3.7, 6.9, 7.0, 5.2];
+    const novaNota = Number(prompt(`Informe uma nova nota para adicionar na lista:`));
+
+    let listaNotasAlunos = notasAlunos.push(novaNota);
+    let alunosAprovados = [];
+
+    for(let num of notasAlunos){
+        if(num >= 6){
+            alunosAprovados.push(num);
+        }
+    }
+
+    let quantidadeAprovados = alunosAprovados.length;
+
+    alert(`O número total de alunos aprovados é: ${quantidadeAprovados}`);
+
 </script>
