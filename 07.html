@@ -8,4 +8,14 @@ Apresente para o usuário qual será o valor final da compra.
     */
 
     let contasNaoPagas = [50.00, 15.50, 120.00, 80];
+    let juroAplic = Number(prompt(`Informe quanto será o juro aplicado nos valores de contas não pagas:`));
+
+    let soma = 0;
+
+    for (let num of contasNaoPagas) {
+        let numComJuros = num + (juroAplic / 100 * num);
+        soma = soma + numComJuros;
+    }
+
+    document.write(`O valor final da compra será de: R$ ${soma.toFixed(2)}`);
 </script>
