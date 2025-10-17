@@ -11,9 +11,14 @@ Apresente para o usuário qual é a palavra mais longa contida no Array.
     const nomeUsuario = prompt(`Informe o seu nome:`);
 
     let listaNova = palavras.push(nomeUsuario);
+    let palavraLonga = "";
 
     for(let palavra of palavras){
-        
+        if (palavra.length > palavraLonga.length) {
+            palavraLonga = palavra;
+        }
     }
+
+    alert(`A palavra mais longa contida na lista é: ${palavraLonga}`);
     
 </script>
